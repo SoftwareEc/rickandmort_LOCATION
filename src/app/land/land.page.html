@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tierra </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="locationslist"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="location">
+    <ion-card>
+      <ion-card-content>
+        
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-icon class="space" name="globe-outline"></ion-icon> <ion-label>Nombre</ion-label>
+          </ion-item-divider>
+          <ion-item class="ion-text-center">
+            <ion-label>{{location.name}}</ion-label>
+          </ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-icon class="space" name="alert-circle-outline"></ion-icon> <ion-label>Tipo</ion-label>
+          </ion-item-divider>
+          <ion-item class="ion-text-center">
+            <ion-label>{{location.type}}</ion-label>
+          </ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-icon class="space" name="rocket-outline"></ion-icon>  <ion-label>Dimensión</ion-label>
+          </ion-item-divider>
+          <ion-item class="ion-text-center">
+            <ion-label>{{location.dimension}}</ion-label>
+          </ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-icon class="space" name="calendar-outline"></ion-icon> <ion-label>Fecha de creación</ion-label>
+          </ion-item-divider>
+          <ion-item class="ion-text-center">
+            <ion-label>{{location.created}}</ion-label>
+          </ion-item>
+        </ion-item-group>
+
+      
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

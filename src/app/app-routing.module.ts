@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'locationslist',
+    loadChildren: () => import('./locationslist/locationslist.module').then( m => m.LocationslistPageModule)
+  },
+  {
+    path: 'land/:id',
+    loadChildren: () => import('./land/land.module').then( m => m.LandPageModule)
+  },
 ];
 
 @NgModule({
